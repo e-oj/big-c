@@ -14,11 +14,11 @@ async function getDB(){
 export async function setUser({ user }: SessionProps) {
     if (!user) return null;
 
-    const { email, id, username } = user;
-    const userData = { email, userId: id, username };
+    const { email, id: userId, username } = user;
+    const userData = { email, userId, username };
     const {db, connection} = await getDB();
 
-    await db.collection('users').insertOne(userData);
+    await db.collection('users').replaceOne({userId}, userData, {upsert: true});
     await connection.close();
 }
 
