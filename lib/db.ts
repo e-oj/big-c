@@ -1,19 +1,5 @@
-import { Db } from '../types'
+import {MongoDbClient} from './dbs/mongodb';
 
-const { DB_TYPE } = process.env;
+const mongoDbClient = new MongoDbClient();
 
-let db: Db;
-
-switch (DB_TYPE) {
-    case 'firebase':
-        db = require('./dbs/firebase');
-        break;
-    case 'mysql':
-        db = require('./dbs/mysql');
-        break;
-    default:
-        db = require('./dbs/mongodb.ts');
-        break;
-}
-
-export default db;
+export default mongoDbClient;

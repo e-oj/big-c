@@ -1,4 +1,4 @@
-import { SessionProps } from './index';
+import { SessionProps } from '@types';
 
 export interface StoreData {
     accessToken?: string;
@@ -11,13 +11,13 @@ export interface UserData {
     username?: string;
 }
 
-export interface Db {
-    hasStoreUser(storeHash: string, userId: string): boolean;
+export interface DbClient {
+    hasStoreUser(storeHash: string, userId: string): Promise<boolean>;
     setUser(session: SessionProps): Promise<void>;
     setStore(session: SessionProps): Promise<void>;
     setStoreUser(session: SessionProps): Promise<void>;
-    getStore(): StoreData | null;
-    getStoreToken(storeId: string): string | null;
+    getStore(storeHash: string): Promise<StoreData | null>;
+    getStoreToken(storeHash: string): Promise<string | null>;
     deleteStore(session: SessionProps): Promise<void>;
     deleteUser(session: SessionProps): Promise<void>;
 }
