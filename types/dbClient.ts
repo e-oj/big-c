@@ -1,4 +1,4 @@
-import { SessionProps } from '@types';
+import { SessionProps } from './auth';
 
 export interface StoreData {
     accessToken?: string;
