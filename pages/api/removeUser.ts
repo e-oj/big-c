@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getBCVerify, removeUserData } from '../../lib/auth';
+import { getBCVerify, removeUserData } from '@lib/auth';
 
 export default async function removeUser(req: NextApiRequest, res: NextApiResponse) {
     try {

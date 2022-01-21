@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { URLSearchParams } from 'url';
-import { bigcommerceClient, getSession } from '../../../lib/auth';
+import { bigcommerceClient, getSession } from '@lib/auth';
 
 export default async function list(req: NextApiRequest, res: NextApiResponse) {
     try {

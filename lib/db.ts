@@ -1,4 +1,4 @@
-import {MongoDbClient} from './dbs/mongodb';
+import {MongoDbClient} from './db/mongodb';
 
 const mongoDbClient = new MongoDbClient();
 

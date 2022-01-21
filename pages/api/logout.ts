@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getSession, logoutUser } from '../../lib/auth';
+import { getSession, logoutUser } from '@lib/auth';
 
 export default async function logout(req: NextApiRequest, res: NextApiResponse) {
     try {

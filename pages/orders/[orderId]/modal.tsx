@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 
+import { useOrder } from '@lib/hooks';
+import { Order } from '@types';
 import ErrorMessage from '../../../components/error';
-import { useOrder } from '../../../lib/hooks';
-import { Order } from '../../../types';
 
 const StyledAddress = styled.address`
     color: ${({ theme }) => theme.colors.secondary70};

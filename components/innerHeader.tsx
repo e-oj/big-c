@@ -1,7 +1,7 @@
 import { Box, Button, H1, HR, Text } from '@bigcommerce/big-design';
 import { ArrowBackIcon } from '@bigcommerce/big-design-icons';
 import { useRouter } from 'next/router';
-import { useProductList } from '../lib/hooks';
+import { useProductList } from '@lib/hooks';
 import { TabIds, TabRoutes } from './header';
 
 const InnerHeader = () => {

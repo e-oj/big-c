@@ -1,6 +1,6 @@
 import { Button, Checkbox, Flex, FormGroup, Input, Panel, Select, Form as StyledForm, Textarea } from '@bigcommerce/big-design';
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { FormData, StringKeyValue } from '../types';
+import { FormData, StringKeyValue } from '@types';
 
 interface FormProps {
     formData: FormData;

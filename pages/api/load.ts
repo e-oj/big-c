@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { encodePayload, getBCVerify, setSession } from '../../lib/auth';
+import { encodePayload, getBCVerify, setSession } from '@lib/auth';
 
 const buildRedirectUrl = (url: string, encodedContext: string) => {
     const [path, query = ''] = url.split('?');

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { bigcommerceClient, getSession } from '../../../../lib/auth';
+import { bigcommerceClient, getSession } from '@lib/auth';
 
 export default async function orderId(req: NextApiRequest, res: NextApiResponse) {
     const {

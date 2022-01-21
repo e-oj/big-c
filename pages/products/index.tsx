@@ -3,10 +3,10 @@ import { MoreHorizIcon } from '@bigcommerce/big-design-icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ReactElement, useState } from 'react';
+import { useProductList } from '@lib/hooks';
+import { TableItem } from '@types';
 import ErrorMessage from '../../components/error';
 import Loading from '../../components/loading';
-import { useProductList } from '../../lib/hooks';
-import { TableItem } from '../../types';
 
 const Products = () => {
     const [itemsPerPage, setItemsPerPage] = useState(10);

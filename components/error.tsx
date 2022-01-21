@@ -1,5 +1,5 @@
 import { H3, Panel } from '@bigcommerce/big-design';
-import { ErrorMessageProps, ErrorProps } from '../types';
+import { ErrorMessageProps, ErrorProps } from '@types';
 
 const ErrorContent = ({ message }: Pick<ErrorProps, 'message'>) => (
     <>

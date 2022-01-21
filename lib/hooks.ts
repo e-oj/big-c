@@ -1,6 +1,6 @@
 import useSWR from 'swr';
+import { ErrorProps, ListItem, Order, QueryParams, ShippingAndProductsInfo } from '@types';
 import { useSession } from '../context/session';
-import { ErrorProps, ListItem, Order, QueryParams, ShippingAndProductsInfo } from '../types';
 
 async function fetcher(url: string, query: string) {
     const res = await fetch(`${url}?${query}`);

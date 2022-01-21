@@ -1,10 +1,9 @@
 import { Button, Flex, H1, Panel, StatefulTable, Text } from '@bigcommerce/big-design';
 import { useRouter } from 'next/router';
-
+import { useShippingAndProductsInfo } from '@lib/hooks';
+import { BillingAddress, OrderProduct, ShippingAndProductsInfo } from '@types';
 import ErrorMessage from '../../../components/error';
 import Loading from '../../../components/loading';
-import { useShippingAndProductsInfo } from '../../../lib/hooks';
-import { BillingAddress, OrderProduct, ShippingAndProductsInfo } from '../../../types';
 
 const InternalOrderPage = (order: ShippingAndProductsInfo) => {
     const { shipping_addresses = [], products = [] } = order

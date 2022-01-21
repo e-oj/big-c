@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { encodePayload, getBCAuth, setSession } from '../../lib/auth';
+import { encodePayload, getBCAuth, setSession } from '@lib/auth';
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     try {

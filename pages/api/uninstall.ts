@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getBCVerify, removeDataStore } from '../../lib/auth';
+import { getBCVerify, removeDataStore } from '@lib/auth';
 
 export default async function uninstall(req: NextApiRequest, res: NextApiResponse) {
     try {
