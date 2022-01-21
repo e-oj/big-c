@@ -12,7 +12,7 @@ switch (DB_TYPE) {
         db = require('./dbs/mysql');
         break;
     default:
-        db = require('./dbs/firebase');
+        db = require('./dbs/mongodb.ts');
         break;
 }
 
